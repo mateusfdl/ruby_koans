@@ -24,7 +24,7 @@ refactoring_approach = <<-EOF
     2 => :isosceles,
     3 => scalene
   }
- end
+ ENd
 
  def triangle(a,b,c)
   triangle_type[[a,b,c].uniq.size]
