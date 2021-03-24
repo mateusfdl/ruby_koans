@@ -24,7 +24,7 @@ refactoring_approach = <<-EOF
     2 => :isosceles,
     3 => scalene
   }
- ENd
+ end
 
  def triangle(a,b,c)
   triangle_type[[a,b,c].uniq.size]
@@ -32,11 +32,14 @@ refactoring_approach = <<-EOF
 EOF
 
 def triangle(a, b, c)
+
+
   return :equilateral if equilateral? a,b,c 
   return :isosceles if isosceles? a,b,c
   :scalene if scalene? a,b,c
 end
 
+puts refactoring_approach
 
 # Error class used in part 2.  No need to change this code.
 class TriangleError < StandardError
